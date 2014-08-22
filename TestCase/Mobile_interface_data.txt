@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation     A test suite with test cases for testing the mobile interface of gongpingjia web site
-Library           ../PythonLib/MobileData.py
+Library           ../PythonLib/MobileFunction.py
 Suite Teardown
 
 *** Test Cases ***
