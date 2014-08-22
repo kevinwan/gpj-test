@@ -1,0 +1,11 @@
+*** Settings ***
+Documentation     A test suite with test cases for testing the mobile interface of gongpingjia web site
+Library           ../PythonLib/MobileData.py
+Suite Teardown
+
+*** Test Cases ***
+Mobile city data 0001
+    verify city data
+
+Mobile brand data 0002
+    verify brand data
