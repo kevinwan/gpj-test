@@ -8,6 +8,7 @@ server_ip = 'http://127.0.0.1:8000/'
 url_city = server_ip + 'mobile/city-data/'
 url_brand = server_ip + 'mobile/category/brand-data/'
 
+
 def _get_interface_city_data(url, key):
     r = requests.get(url)         # get the Json data from the local testing server
     mobile_data = eval(r.text)           # transform the string type into dictionary
@@ -26,8 +27,8 @@ def verify_city_data():
         if local == mobile:
             print "expected value: %s, received value: %s" % (local, mobile)
         else:
-            raise AssertionError("Province name verification failed: expected value :%s  received value:%s" %
-        (local, mobile))
+            raise AssertionError(
+                "Province name verification failed: expected value :%s  received value:%s" % (local, mobile))
 
     for num in range(0, length):
         city_length = len(local_city_data[num]['cities'])
@@ -37,8 +38,9 @@ def verify_city_data():
             if local == mobile:
                 print "expected value: %s,   received value: %s" % (local, mobile)
             else:
-                raise AssertionError("City name verification failed: expected value :%s  received value:%s" %
-                (local, mobile))
+                raise AssertionError(
+                    "City name verification failed: expected value :%s  received value:%s" % (local, mobile))
+
 
 def verify_brand_data():
     key = 'brand'
@@ -57,19 +59,19 @@ def verify_brand_data():
         if local_FL == mobile_FL:
             print "expected value: %s,   received value: %s" % (local_FL, mobile_FL)
         else:
-            raise AssertionError("First letter verification failed: expected value :%s  received value:%s" %
-            (local_FL, mobile_FL))
+            raise AssertionError(
+                "First letter verification failed: expected value :%s  received value:%s" % (local_FL, mobile_FL))
 
         if local_name == mobile_name:
             print "expected value: %s,   received value: %s" % (local_name, mobile_name)
         else:
-            raise AssertionError("Name verification failed: expected value :%s  received value:%s" %
-            (local_name, mobile_name))
+            raise AssertionError(
+                "Name verification failed: expected value :%s  received value:%s" % (local_name, mobile_name))
         if local_slug == mobile_slug:
             print "expected value: %s,   received value: %s" % (local_slug, mobile_slug)
         else:
-            raise AssertionError("Slug verification failed: expected value :%s  received value:%s" %
-            (local_slug, mobile_slug))
+            raise AssertionError(
+                "Slug verification failed: expected value :%s  received value:%s" % (local_slug, mobile_slug))
 
 
 # This was used for testing the python lib directly
