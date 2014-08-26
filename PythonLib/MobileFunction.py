@@ -114,7 +114,8 @@ def verify_model_data():
             print "expected value: %s,   received value: %s" % (local_keywords, mobile_keywords)
         else:
             raise AssertionError(
-                "First letter verification failed: expected value :%s  received value:%s" % (local_keywords, mobile_keywords))
+                "First letter verification failed: expected value :%s  received value:%s" %
+                (local_keywords, mobile_keywords))
 
 # This was used for testing the python lib directly
 if __name__ == '__main__':
