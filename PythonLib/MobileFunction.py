@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-from CityData import city_data
-from BrandData import brand_data
-from ModelData import model_data
+from TestData.CityData import city_data
+from TestData.BrandData import brand_data
+from TestData.ModelData import model_data
+from TestData.ModelDetailData import Model_detail_data
 import requests
 
 #Set the server ip according to your testing environment
@@ -9,7 +10,7 @@ SERVER_IP = 'http://127.0.0.1:8000/'
 URL_CITY = SERVER_IP + 'mobile/city-data/'
 URL_BRAND = SERVER_IP + 'mobile/category/brand-data/'
 URL_MODEL = SERVER_IP + 'mobile/category/model-data/'
-DETAIL_MODEL = SERVER_IP + 'mobile/evaluate/detail-model/?brand=audi&model=audi-a4'
+URL_DETAIL_MODEL = SERVER_IP + 'mobile/evaluate/detail-model/?brand=audi&model=audi-a4'
 
 
 def _get_interface_city_data(url, key):
@@ -117,7 +118,32 @@ def verify_model_data():
                 "First letter verification failed: expected value :%s  received value:%s" %
                 (local_keywords, mobile_keywords))
 
+
+def verify_model_detail_data():
+    key = 'detail_model'
+    local_model_detail_data = Model_detail_data['detail_model']
+    mobile_model_detail_data = _get_interface_city_data(URL_DETAIL_MODEL, key)
+    length = len(local_model_detail_data)
+
+    for num in range(0, length):
+        for key in local_model_detail_data[num].keys():
+            #judge the value type
+            if not isinstance(local_model_detail_data[num][key], int):
+                local_data = (u"" + local_model_detail_data[num][key])
+                mobile_data = eval("u" + "'" + mobile_model_detail_data[num][key] + "'")
+            else:
+                local_data = str(local_data)
+                mobile_data = str(mobile_data)
+            if local_data == mobile_data:
+                print "expected value: %s,  received value: %s" % (local_data, mobile_data)
+            else:
+                raise AssertionError(
+                    "First letter verification failed: expected value :%s  received value:%s" %
+                    (local_data, mobile_data))
+
+
 # This was used for testing the python lib directly
 if __name__ == '__main__':
-    verify_city_data()
-    verify_brand_data()
+    # verify_city_data()
+    # verify_brand_data()
+    verify_model_detail_data()

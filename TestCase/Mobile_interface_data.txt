@@ -12,3 +12,6 @@ Mobile brand data 0002
 
 Mobile model data 0003
     verify model data
+    
+Mobile model data 0004
+    verify model detail data
