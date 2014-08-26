@@ -9,3 +9,6 @@ Mobile city data 0001
 
 Mobile brand data 0002
     verify brand data
+
+Mobile model data 0003
+    verify model data

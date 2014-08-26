@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
 from CityData import city_data
 from BrandData import brand_data
+from ModelData import model_data
 import requests
 
 #Set the server ip according to your testing environment
-server_ip = 'http://127.0.0.1:8000/'
-url_city = server_ip + 'mobile/city-data/'
-url_brand = server_ip + 'mobile/category/brand-data/'
+SERVER_IP = 'http://127.0.0.1:8000/'
+URL_CITY = SERVER_IP + 'mobile/city-data/'
+URL_BRAND = SERVER_IP + 'mobile/category/brand-data/'
+URL_MODEL = SERVER_IP + 'mobile/category/model-data/'
+DETAIL_MODEL = SERVER_IP + 'mobile/evaluate/detail-model/?brand=audi&model=audi-a4'
 
 
 def _get_interface_city_data(url, key):
@@ -18,7 +21,7 @@ def _get_interface_city_data(url, key):
 def verify_city_data():
     key = 'cities'
     local_city_data = city_data['cities']
-    mobile_city_data = _get_interface_city_data(url_city, key)
+    mobile_city_data = _get_interface_city_data(URL_CITY, key)
     length = len(local_city_data)
 
     for num in range(0, length):
@@ -43,9 +46,10 @@ def verify_city_data():
 
 
 def verify_brand_data():
+
     key = 'brand'
     local_brand_data = brand_data['brand']
-    mobile_brand_data = _get_interface_city_data(url_brand, key)
+    mobile_brand_data = _get_interface_city_data(URL_BRAND, key)
     length = len(mobile_brand_data)
 
     for num in range(0, length):
@@ -73,6 +77,44 @@ def verify_brand_data():
             raise AssertionError(
                 "Slug verification failed: expected value :%s  received value:%s" % (local_slug, mobile_slug))
 
+
+def verify_model_data():
+    key = 'model'
+    local_model_data = model_data['model']
+    mobile_model_data = _get_interface_city_data(URL_MODEL, key)
+    length = len(mobile_model_data)
+
+    for num in range(0, length):
+        local_name = (u"" + local_model_data[num]['name'])
+        local_parent = (u"" + local_model_data[num]['parent'])
+        local_slug = (u"" + local_model_data[num]['slug'])
+        local_keywords = (u"" + local_model_data[num]['keywords'])
+        mobile_name = eval("u" + "'" + mobile_model_data[num]['name'] + "'")
+        mobile_parent = eval("u" + "'" + mobile_model_data[num]['parent'] + "'")
+        mobile_slug = eval("u" + "'" + mobile_model_data[num]['slug'] + "'")
+        mobile_keywords = eval("u" + "'" + mobile_model_data[num]['keywords'] + "'")
+
+        if local_name == mobile_name:
+            print "expected value: %s,   received value: %s" % (local_name, mobile_name)
+        else:
+            raise AssertionError(
+                "First letter verification failed: expected value :%s  received value:%s" % (local_name, mobile_name))
+        if local_parent == mobile_parent:
+            print "expected value: %s,   received value: %s" % (local_parent, mobile_parent)
+        else:
+            raise AssertionError(
+                "First letter verification failed: expected value :%s  received value:%s" %
+                (local_parent, mobile_parent))
+        if local_slug == mobile_slug:
+            print "expected value: %s,   received value: %s" % (local_slug, mobile_slug)
+        else:
+            raise AssertionError(
+                "First letter verification failed: expected value :%s  received value:%s" % (local_slug, mobile_slug))
+        if local_keywords == mobile_keywords:
+            print "expected value: %s,   received value: %s" % (local_keywords, mobile_keywords)
+        else:
+            raise AssertionError(
+                "First letter verification failed: expected value :%s  received value:%s" % (local_keywords, mobile_keywords))
 
 # This was used for testing the python lib directly
 if __name__ == '__main__':
