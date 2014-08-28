@@ -6,7 +6,7 @@ from TestData.ModelDetailData import Model_detail_data
 import requests
 
 #Set the server ip according to your testing environment
-SERVER_IP = 'http://127.0.0.1:8000/'
+SERVER_IP = 'http://api4.gongpingjia.com/'
 URL_CITY = SERVER_IP + 'mobile/city-data/'
 URL_BRAND = SERVER_IP + 'mobile/category/brand-data/'
 URL_MODEL = SERVER_IP + 'mobile/category/model-data/'
@@ -15,7 +15,10 @@ URL_DETAIL_MODEL = SERVER_IP + 'mobile/evaluate/detail-model/?brand=audi&model=a
 
 def _get_interface_city_data(url, key):
     r = requests.get(url)         # get the Json data from the local testing server
-    mobile_data = eval(r.text)           # transform the string type into dictionary
+    try:
+        mobile_data = eval(r.text) # transform the string type into dictionary
+    except Exception, e:
+        raise AssertionError("getting data from mobile interface by error %s, please check your url" % (e))
     return mobile_data[key]
 
 
@@ -98,24 +101,25 @@ def verify_model_data():
         if local_name == mobile_name:
             print "expected value: %s,   received value: %s" % (local_name, mobile_name)
         else:
+            print "received whole data:",mobile_model_data
             raise AssertionError(
-                "First letter verification failed: expected value :%s  received value:%s" % (local_name, mobile_name))
+                "Model name verification failed: expected value :%s  received value:%s" % (local_name, mobile_name))
         if local_parent == mobile_parent:
             print "expected value: %s,   received value: %s" % (local_parent, mobile_parent)
         else:
             raise AssertionError(
-                "First letter verification failed: expected value :%s  received value:%s" %
+                "Model name parent verification failed: expected value :%s  received value:%s" %
                 (local_parent, mobile_parent))
         if local_slug == mobile_slug:
             print "expected value: %s,   received value: %s" % (local_slug, mobile_slug)
         else:
             raise AssertionError(
-                "First letter verification failed: expected value :%s  received value:%s" % (local_slug, mobile_slug))
+                "Slug verification failed: expected value :%s  received value:%s" % (local_slug, mobile_slug))
         if local_keywords == mobile_keywords:
             print "expected value: %s,   received value: %s" % (local_keywords, mobile_keywords)
         else:
             raise AssertionError(
-                "First letter verification failed: expected value :%s  received value:%s" %
+                "Keywords verification failed: expected value :%s  received value:%s" %
                 (local_keywords, mobile_keywords))
 
 
@@ -138,12 +142,13 @@ def verify_model_detail_data():
                 print "expected value: %s,  received value: %s" % (local_data, mobile_data)
             else:
                 raise AssertionError(
-                    "First letter verification failed: expected value :%s  received value:%s" %
+                    "Model detail data verification failed: expected value :%s  received value:%s" %
                     (local_data, mobile_data))
 
 
 # This was used for testing the python lib directly
 if __name__ == '__main__':
-    # verify_city_data()
-    # verify_brand_data()
+    verify_city_data()
+    verify_brand_data()
     verify_model_detail_data()
+    verify_model_data()

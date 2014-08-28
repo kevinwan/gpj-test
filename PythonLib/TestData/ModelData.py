@@ -5,7 +5,7 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-model_data ={
+model_data = {
     "status": "success",
     "msg": "message",
     "model": [
@@ -48,6 +48,14 @@ model_data ={
             "logo_img": "placeholder.png",
             "keywords": ",GMCSavana,GMCSavana,GMC,gmc,GMC",
             "thumbnail": "bfe59b480f5b77c4beb87bf032d26c09756701ad.jpg"
+        },
+        {
+            "name": "GMCSierra",
+            "parent": "gmc",
+            "slug": "bseries_1983",
+            "logo_img": "placeholder.png",
+            "keywords": ",GMCSierra,GMCSierra,GMC,gmc,GMC",
+            "thumbnail": "placeholder.png"
         },
         {
             "name": "GMCTerrain",
@@ -2458,6 +2466,14 @@ model_data ={
             "thumbnail": "placeholder.png"
         },
         {
+            "name": "哈弗H2",
+            "parent": "hafu",
+            "slug": "hafu-h2",
+            "logo_img": "05dba5902c057e90d2107a1a948edf8d312df7c3.jpg",
+            "keywords": ",hafuH2,哈弗H2,哈弗,hafu,长城汽车",
+            "thumbnail": "05dba5902c057e90d2107a1a948edf8d312df7c3.jpg"
+        },
+        {
             "name": "哈弗H3",
             "parent": "hafu",
             "slug": "changcheng-h3",
@@ -3786,6 +3802,14 @@ model_data ={
             "thumbnail": "fd1a31fee1d635b6ae0bf079cd646c0a1a7019f7.jpg"
         },
         {
+            "name": "巴博斯M级",
+            "parent": "barbus",
+            "slug": "barbus_m",
+            "logo_img": "71a9d9f0eb03674ba5911f5df9676ce9b24755df.jpg",
+            "keywords": ",babosimji,巴博斯M级,巴博斯,barbus,巴博斯",
+            "thumbnail": "71a9d9f0eb03674ba5911f5df9676ce9b24755df.jpg"
+        },
+        {
             "name": "巴博斯S级",
             "parent": "barbus",
             "slug": "bseries_1998",
@@ -4504,6 +4528,14 @@ model_data ={
             "logo_img": "placeholder.png",
             "keywords": ",kenisaigeCCXR,柯尼赛格CCXR,柯尼赛格,kenisaige,科尼赛克",
             "thumbnail": "e1c8b0d580c24612249f87175197d69a8bbeead2.jpg"
+        },
+        {
+            "name": "标致2008(进口)",
+            "parent": "biaozhi",
+            "slug": "baozhi2008-jinkou",
+            "logo_img": "placeholder.png",
+            "keywords": ",biaozhi2008(jinkou),标致2008(进口),标致,biaozhi,进口标致",
+            "thumbnail": "placeholder.png"
         },
         {
             "name": "标致206",
@@ -6114,11 +6146,27 @@ model_data ={
             "thumbnail": "d9a43be9ff5c9feeb69468b5cff3587c254fdb17.jpg"
         },
         {
+            "name": "英菲尼迪Q50",
+            "parent": "infiniti",
+            "slug": "infiniti-q50",
+            "logo_img": "9e92951a338416569f63e92ef74cec4fdcbd61f7.jpg",
+            "keywords": ",yingfeinidiQ50,英菲尼迪Q50,英菲尼迪,infiniti,英菲尼迪",
+            "thumbnail": "9e92951a338416569f63e92ef74cec4fdcbd61f7.jpg"
+        },
+        {
             "name": "英菲尼迪Q60",
             "parent": "infiniti",
             "slug": "infiniti-q60",
             "logo_img": "placeholder.png",
             "keywords": ",yingfeinidiQ60,英菲尼迪Q60,英菲尼迪,infiniti,英菲尼迪",
+            "thumbnail": "placeholder.png"
+        },
+        {
+            "name": "英菲尼迪Q60S",
+            "parent": "infiniti",
+            "slug": "infiniti-q60s",
+            "logo_img": "placeholder.png",
+            "keywords": ",yingfeinidiQ60S,英菲尼迪Q60S,英菲尼迪,infiniti,英菲尼迪",
             "thumbnail": "placeholder.png"
         },
         {
@@ -6440,6 +6488,14 @@ model_data ={
             "logo_img": "9c390d8d0381cabba7a868146c51acfe8b7b817a.jpg",
             "keywords": ",qiyaK5,起亚K5,起亚,kia,东风悦达起亚",
             "thumbnail": "f32e5022c4a84385cbf87d6906bb936d6cd7213b.jpg"
+        },
+        {
+            "name": "起亚K5(进口)",
+            "parent": "kia",
+            "slug": "kia-k5jinkou",
+            "logo_img": "placeholder.png",
+            "keywords": ",qiyaK5(jinkou),起亚K5(进口),起亚,kia,进口起亚",
+            "thumbnail": "placeholder.png"
         },
         {
             "name": "起亚VQ(进口)",
