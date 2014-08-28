@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from TestData.CityData import city_data
-from TestData.BrandData import brand_data
-from TestData.ModelData import model_data
-from TestData.ModelDetailData import Model_detail_data
+from MobileTestData.CityData import city_data
+from MobileTestData.BrandData import brand_data
+from MobileTestData.ModelData import model_data
+from MobileTestData.ModelDetailData import Model_detail_data
 import requests
 
 #Set the server ip according to your testing environment
