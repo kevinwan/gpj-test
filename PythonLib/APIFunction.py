@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#This testing lib was used for testing the API interface
+# This testing lib was used for testing the API interface
 
 #Set the server ip according to your testing environment
 import re
@@ -18,16 +18,15 @@ URL_CHEDUOSHAO_OUT_RANGE = SERVER_IP + 'cars/dealprice/?brand=大众&model=捷�
 &month=5&color=黑&mile=3.2&city=北京&domain=cheduoshao.com'
 
 
-
-
 def _get_interface_city_data(url):
-    r = requests.get(url)         # get the Json data from the local testing server
+    r = requests.get(url)  # get the Json data from the local testing server
     try:
-        mobile_data = eval(r.text) # transform the string type into dictionary
+        mobile_data = eval(r.text)  # transform the string type into dictionary
     except Exception, e:
         print "Getting data is %s", r.text
-        raise AssertionError("getting data from mobile interface by error %s, please check your url" % (e))
+        raise AssertionError("getting data from mobile interface by error %s, please check your url" % e)
     return mobile_data
+
 
 def verify_cds_data():
     api_data = _get_interface_city_data(URL_CHEDUOSHAO)
@@ -37,12 +36,14 @@ def verify_cds_data():
         print "expected value: %s, received value: %s" % (local_data['status'], api_data['status'])
     else:
         raise AssertionError(
-            "Status verification failed: expected value :%s  received value:%s" % (local_data['status'],api_data['status']))
+            "Status verification failed: expected value :%s  received value:%s" % (
+                local_data['status'], api_data['status']))
     if local_data['message'] == api_data['message']:
         print "message value: %s, received value: %s" % (local_data['message'], api_data['message'])
     else:
         raise AssertionError(
-            "Message verification failed: expected value :%s  received value:%s" % (local_data['status'],api_data['status']))
+            "Message verification failed: expected value :%s  received value:%s" % (
+                local_data['status'], api_data['status']))
 
     pattern = re.compile(r'\d+')
     search = pattern.search(api_data['deal_price'])
@@ -52,6 +53,7 @@ def verify_cds_data():
         raise AssertionError(
             "Deal price verification failed: expected value is number, received %s" % (api_data['deal_price']))
 
+
 def verify_missing_para_message():
     api_data = _get_interface_city_data(URL_CHEDUOSHAO_MISSING_COLOR)
     local_data = TestData.CheDuoShao_missing_para
@@ -60,13 +62,15 @@ def verify_missing_para_message():
         print "expected value: %s, received value: %s" % (local_data['status'], api_data['status'])
     else:
         raise AssertionError(
-        "Status verification failed: expected value :%s  received value:%s" % (local_data['status'],api_data['status']))
+            "Status verification failed: expected value :%s  received value:%s" % (
+                local_data['status'], api_data['status']))
     if local_data['message'] == api_data['message']:
         print "expected value: %s, received value: %s" % (local_data['message'], api_data['message'])
     else:
         raise AssertionError(
-        "Error message verification failed: expected value :%s  received value:%s" %
-        (local_data['message'],api_data['message']))
+            "Error message verification failed: expected value :%s  received value:%s" %
+            (local_data['message'], api_data['message']))
+
 
 def verify_wrong_para_message():
     api_data = _get_interface_city_data(URL_CHEDUOSHAO_WRONG_PAPA)
@@ -76,13 +80,15 @@ def verify_wrong_para_message():
         print "expected value: %s, received value: %s" % (local_data['status'], api_data['status'])
     else:
         raise AssertionError(
-        "Status verification failed: expected value :%s  received value:%s" % (local_data['status'],api_data['status']))
+            "Status verification failed: expected value :%s  received value:%s" % (
+                local_data['status'], api_data['status']))
     if local_data['message'] == api_data['message']:
         print "expected value: %s, received value: %s" % (local_data['message'], api_data['message'])
     else:
         raise AssertionError(
-        "Error message verification failed: expected value :%s  received value:%s" %
-        (local_data['message'],api_data['message']))
+            "Error message verification failed: expected value :%s  received value:%s" %
+            (local_data['message'], api_data['message']))
+
 
 def verify_out_range_message():
     api_data = _get_interface_city_data(URL_CHEDUOSHAO_OUT_RANGE)
@@ -91,13 +97,14 @@ def verify_out_range_message():
         print "expected value: %s, received value: %s" % (local_data['status'], api_data['status'])
     else:
         raise AssertionError(
-        "Status verification failed: expected value :%s  received value:%s" % (local_data['status'],api_data['status']))
+            "Status verification failed: expected value :%s  received value:%s" % (
+                local_data['status'], api_data['status']))
     if local_data['message'] == api_data['message']:
         print "expected value: %s, received value: %s" % (local_data['message'], api_data['message'])
     else:
         raise AssertionError(
-        "Error message verification failed: expected value :%s  received value:%s" %
-        (local_data['message'],api_data['message']))
+            "Error message verification failed: expected value :%s  received value:%s" %
+            (local_data['message'], api_data['message']))
 
 
 if __name__ == "__main__":
