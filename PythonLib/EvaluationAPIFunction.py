@@ -2,12 +2,14 @@
 # This testing lib was used for testing the API interface
 
 #Set the server ip according to your testing environment
+
 import re
 from APITestData import TestData
 import requests
 
 # SERVER_IP = 'http://www.gongpingjia.com/api/'
-SERVER_IP = 'http://127.0.0.1:8000/api/'
+# SERVER_IP = 'http://0.0.0.0:8000/api/'
+SERVER_IP = 'http://eyelee.cn/api/'
 URL_CHEDUOSHAO = SERVER_IP + 'cars/dealprice/?brand=大众&model=捷达&mum=一汽-大众&volume=1.6&year=2002&\
 month=5&color=黑&mile=3.2&city=北京&domain=cheduoshao.com'
 URL_CHEDUOSHAO_MISSING_COLOR = SERVER_IP + 'cars/dealprice/?brand=大众&model=捷达&mum=一汽-大众&volume=1.6&year=2002&\
@@ -16,6 +18,9 @@ URL_CHEDUOSHAO_WRONG_PAPA = SERVER_IP + 'cars/dealprice/?brand=大众&model=捷�
 month=5&color=黑&mile=3.2&city=北京&domain=cheduoshao.com'
 URL_CHEDUOSHAO_OUT_RANGE = SERVER_IP + 'cars/dealprice/?brand=大众&model=捷达&mum=一汽-大众&volume=1.6&year=2020\
 &month=5&color=黑&mile=3.2&city=北京&domain=cheduoshao.com'
+
+URL_BAIXING = SERVER_IP + 'cars/evaluation/baixing/?brand=9&model=235&d_model=97536&volume=2.0&year=2012\
+&month=5&color=黑&mile=3.2&city=北京&intent=private'
 
 
 def _get_interface_city_data(url):
@@ -106,9 +111,14 @@ def verify_out_range_message():
             "Error message verification failed: expected value :%s  received value:%s" %
             (local_data['message'], api_data['message']))
 
+def verify_baixing():
+    api_data = _get_interface_city_data(URL_BAIXING)
+    print api_data
+
 
 if __name__ == "__main__":
     verify_cds_data()
     verify_missing_para_message()
     verify_wrong_para_message()
     verify_out_range_message()
+    verify_baixing()
