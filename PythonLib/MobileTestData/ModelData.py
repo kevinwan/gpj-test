@@ -1978,6 +1978,14 @@ model_data = {
             "thumbnail": "Img49377_t.jpg"
         },
         {
+            "name": "卡尔森 GL级",
+            "parent": "logo_269",
+            "slug": "bseries_1932",
+            "logo_img": "12509.jpg",
+            "keywords": ",kaersen GLji,卡尔森 GL级,卡尔森,logo_269,卡尔森",
+            "thumbnail": "12509.jpg"
+        },
+        {
             "name": "双环SCEO",
             "parent": "shuanghuan",
             "slug": "shuanghuan-sceo",
@@ -3624,6 +3632,14 @@ model_data = {
             "logo_img": "69e2ec5b05e753078fbe66aadc21dbde42f2b2dc.jpg",
             "keywords": ",baoma3ji(jinkou),宝马3系(进口),宝马,bmw,进口宝马",
             "thumbnail": "71cbc3310133828c5d9400cc7e8f366dff643d0c.jpg"
+        },
+        {
+            "name": "宝马3系GT",
+            "parent": "bmw",
+            "slug": "bmw-3-gt",
+            "logo_img": "placeholder.png",
+            "keywords": ",baoma3xigt,宝马3系GT,宝马,bmw,进口宝马",
+            "thumbnail": "placeholder.png"
         },
         {
             "name": "宝马5系",

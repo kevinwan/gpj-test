@@ -19,6 +19,7 @@ month=5&color=黑&mile=3.2&city=北京&domain=cheduoshao.com'
 URL_CHEDUOSHAO_OUT_RANGE = SERVER_IP + 'cars/dealprice/?brand=大众&model=捷达&mum=一汽-大众&volume=1.6&year=2020\
 &month=5&color=黑&mile=3.2&city=北京&domain=cheduoshao.com'
 
+#Baixing evaluation API testing
 URL_BAIXING = SERVER_IP + 'cars/evaluation/baixing/?brand=9&model=235&d_model=97536&volume=2.0&year=2012\
 &month=5&color=黑&mile=3.2&city=北京&intent=private'
 

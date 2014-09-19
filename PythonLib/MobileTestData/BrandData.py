@@ -3,7 +3,7 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-brand_data={
+brand_data = {
     "status": "success",
     "msg": "message",
     "brand": [
@@ -39,27 +39,27 @@ brand_data={
         },
         {
             "first_letter": "B",
-            "name": "奔腾",
-            "logo_img": "365a8ff700d99f8f08222e3b99ebbb8d2352ad26.jpg",
-            "slug": "benteng"
-        },
-        {
-            "first_letter": "B",
-            "name": "巴博斯",
-            "logo_img": "11e6cf2c0ec7d07054a307cd1d15d09c0ca63131.jpg",
-            "slug": "barbus"
-        },
-        {
-            "first_letter": "B",
             "name": "北汽制造",
             "logo_img": "4b1863e20390ab2f1f99958b088ce37fa31e9d9a.jpg",
             "slug": "beiqizhizao"
         },
         {
             "first_letter": "B",
+            "name": "奔腾",
+            "logo_img": "365a8ff700d99f8f08222e3b99ebbb8d2352ad26.jpg",
+            "slug": "benteng"
+        },
+        {
+            "first_letter": "B",
             "name": "北汽威旺",
             "logo_img": "beiqiweiwang_brang.jpg",
             "slug": "beiqiweiwang"
+        },
+        {
+            "first_letter": "B",
+            "name": "巴博斯",
+            "logo_img": "11e6cf2c0ec7d07054a307cd1d15d09c0ca63131.jpg",
+            "slug": "barbus"
         },
         {
             "first_letter": "B",
@@ -81,30 +81,6 @@ brand_data={
         },
         {
             "first_letter": "B",
-            "name": "奔驰",
-            "logo_img": "14fd54bf2c4f3e9e006775433368b17d6e8c739c.png",
-            "slug": "benz"
-        },
-        {
-            "first_letter": "B",
-            "name": "别克",
-            "logo_img": "721577ad1a23f31ebd31c593926c001faf5b30e9.jpg",
-            "slug": "buick"
-        },
-        {
-            "first_letter": "B",
-            "name": "宾利",
-            "logo_img": "9b6f2c7d180342e0ce9915a711d7e225c187b0d7.jpg",
-            "slug": "bentley"
-        },
-        {
-            "first_letter": "B",
-            "name": "宝马",
-            "logo_img": "3b0b703a786121af9f02e7bfc9725db7361a208e.jpg",
-            "slug": "bmw"
-        },
-        {
-            "first_letter": "B",
             "name": "本田",
             "logo_img": "59968bfbb45afb00ea342e619d987968f20dddc3.jpg",
             "slug": "honda"
@@ -116,16 +92,40 @@ brand_data={
             "slug": "porsche"
         },
         {
+            "first_letter": "B",
+            "name": "宝马",
+            "logo_img": "3b0b703a786121af9f02e7bfc9725db7361a208e.jpg",
+            "slug": "bmw"
+        },
+        {
+            "first_letter": "B",
+            "name": "宾利",
+            "logo_img": "9b6f2c7d180342e0ce9915a711d7e225c187b0d7.jpg",
+            "slug": "bentley"
+        },
+        {
+            "first_letter": "B",
+            "name": "别克",
+            "logo_img": "721577ad1a23f31ebd31c593926c001faf5b30e9.jpg",
+            "slug": "buick"
+        },
+        {
+            "first_letter": "B",
+            "name": "奔驰",
+            "logo_img": "14fd54bf2c4f3e9e006775433368b17d6e8c739c.png",
+            "slug": "benz"
+        },
+        {
+            "first_letter": "C",
+            "name": "长安商用",
+            "logo_img": "b3506e2d2f57855fd8635975842e04dbfc266de3.jpg",
+            "slug": "changanshangyong"
+        },
+        {
             "first_letter": "C",
             "name": "昌河",
             "logo_img": "dbeb5c33fa455d2967d01f4d7cda6f262a13276f.jpg",
             "slug": "changhe"
-        },
-        {
-            "first_letter": "C",
-            "name": "长丰猎豹",
-            "logo_img": "6b65c7598adcd4e0eb8364f801b5ee7fde2e9e2e.jpg",
-            "slug": "liebao"
         },
         {
             "first_letter": "C",
@@ -141,21 +141,9 @@ brand_data={
         },
         {
             "first_letter": "C",
-            "name": "长安商用",
-            "logo_img": "b3506e2d2f57855fd8635975842e04dbfc266de3.jpg",
-            "slug": "changanshangyong"
-        },
-        {
-            "first_letter": "D",
-            "name": "DS(谛艾仕)",
-            "logo_img": "270_80.jpg",
-            "slug": "logo_270"
-        },
-        {
-            "first_letter": "D",
-            "name": "东风风度",
-            "logo_img": "logo_dongfengfengdu.png",
-            "slug": "dongfengfengdu"
+            "name": "长丰猎豹",
+            "logo_img": "6b65c7598adcd4e0eb8364f801b5ee7fde2e9e2e.jpg",
+            "slug": "liebao"
         },
         {
             "first_letter": "D",
@@ -165,9 +153,15 @@ brand_data={
         },
         {
             "first_letter": "D",
-            "name": "东风风神",
-            "logo_img": "logo_dongfengfengshen.png",
-            "slug": "dongfengfengshen"
+            "name": "东风风度",
+            "logo_img": "logo_dongfengfengdu.png",
+            "slug": "dongfengfengdu"
+        },
+        {
+            "first_letter": "D",
+            "name": "DS(谛艾仕)",
+            "logo_img": "270_80.jpg",
+            "slug": "logo_270"
         },
         {
             "first_letter": "D",
@@ -177,33 +171,21 @@ brand_data={
         },
         {
             "first_letter": "D",
-            "name": "大通",
-            "logo_img": "dfa9d23d646857981ccd5852bcfa732d9bb97311.jpg",
-            "slug": "datong"
-        },
-        {
-            "first_letter": "D",
-            "name": "东风",
-            "logo_img": "41f2bcf4441fbe6d47af5fa435abd429640a8814.jpg",
-            "slug": "dongfeng"
-        },
-        {
-            "first_letter": "D",
             "name": "大迪",
             "logo_img": "cfbc4c85d4a3c1095600eaaf4a775dc4e97af911.jpg",
             "slug": "dadi"
         },
         {
             "first_letter": "D",
-            "name": "大众",
-            "logo_img": "debfdc24b86c217862ce1bd1110a66b39459c20e.jpg",
-            "slug": "dazhong"
+            "name": "东风风神",
+            "logo_img": "logo_dongfengfengshen.png",
+            "slug": "dongfengfengshen"
         },
         {
             "first_letter": "D",
-            "name": "大宇",
-            "logo_img": "20120620180830330.jpg",
-            "slug": "dayu"
+            "name": "东风",
+            "logo_img": "41f2bcf4441fbe6d47af5fa435abd429640a8814.jpg",
+            "slug": "dongfeng"
         },
         {
             "first_letter": "D",
@@ -218,10 +200,22 @@ brand_data={
             "slug": "daoqi"
         },
         {
-            "first_letter": "F",
-            "name": "丰田",
-            "logo_img": "7ce1a1b5b42beba90b03776151871a2315a1fa6a.jpg",
-            "slug": "toyota"
+            "first_letter": "D",
+            "name": "大众",
+            "logo_img": "debfdc24b86c217862ce1bd1110a66b39459c20e.jpg",
+            "slug": "dazhong"
+        },
+        {
+            "first_letter": "D",
+            "name": "大通",
+            "logo_img": "dfa9d23d646857981ccd5852bcfa732d9bb97311.jpg",
+            "slug": "datong"
+        },
+        {
+            "first_letter": "D",
+            "name": "大宇",
+            "logo_img": "20120620180830330.jpg",
+            "slug": "dayu"
         },
         {
             "first_letter": "F",
@@ -234,6 +228,12 @@ brand_data={
             "name": "福田",
             "logo_img": "735c41c51aad17c94ac10a248167bbc0dd6f8d00.jpg",
             "slug": "futian"
+        },
+        {
+            "first_letter": "F",
+            "name": "丰田",
+            "logo_img": "7ce1a1b5b42beba90b03776151871a2315a1fa6a.jpg",
+            "slug": "toyota"
         },
         {
             "first_letter": "F",
@@ -267,9 +267,9 @@ brand_data={
         },
         {
             "first_letter": "G",
-            "name": "广汽传祺",
-            "logo_img": "a3937e6653db90dc3d3dca998673d43fe4d48c03.jpg",
-            "slug": "guangqichengyongche"
+            "name": "光冈",
+            "logo_img": "341d94bd870b6fb0d219107ee208fb929341b9e1.jpg",
+            "slug": "galue"
         },
         {
             "first_letter": "G",
@@ -279,9 +279,45 @@ brand_data={
         },
         {
             "first_letter": "G",
-            "name": "光冈",
-            "logo_img": "341d94bd870b6fb0d219107ee208fb929341b9e1.jpg",
-            "slug": "galue"
+            "name": "广汽传祺",
+            "logo_img": "a3937e6653db90dc3d3dca998673d43fe4d48c03.jpg",
+            "slug": "guangqichengyongche"
+        },
+        {
+            "first_letter": "H",
+            "name": "海马",
+            "logo_img": "3e6be478081980da23f057b64dda19a6d29cf1a2.jpg",
+            "slug": "haima"
+        },
+        {
+            "first_letter": "H",
+            "name": "哈飞",
+            "logo_img": "d6347d45a819ead1ae9d728a24fb93b2d3a87223.jpg",
+            "slug": "hafei"
+        },
+        {
+            "first_letter": "H",
+            "name": "哈弗",
+            "logo_img": "logo_hafu.png",
+            "slug": "hafu"
+        },
+        {
+            "first_letter": "H",
+            "name": "恒天",
+            "logo_img": "e79a18e26209ba3b2fbabcda191401ec3d7aa0b1.jpg",
+            "slug": "logo_266"
+        },
+        {
+            "first_letter": "H",
+            "name": "华普",
+            "logo_img": "53d5a104e119e18b47bc63cf722d95b34169b7ac.jpg",
+            "slug": "huapu"
+        },
+        {
+            "first_letter": "H",
+            "name": "黄海",
+            "logo_img": "9593c2a50b0463540cd6a1dcd8dc5ff0cf85503b.jpg",
+            "slug": "huanghai"
         },
         {
             "first_letter": "H",
@@ -297,39 +333,9 @@ brand_data={
         },
         {
             "first_letter": "H",
-            "name": "黄海",
-            "logo_img": "9593c2a50b0463540cd6a1dcd8dc5ff0cf85503b.jpg",
-            "slug": "huanghai"
-        },
-        {
-            "first_letter": "H",
-            "name": "恒天",
-            "logo_img": "e79a18e26209ba3b2fbabcda191401ec3d7aa0b1.jpg",
-            "slug": "logo_266"
-        },
-        {
-            "first_letter": "H",
-            "name": "哈弗",
-            "logo_img": "logo_hafu.png",
-            "slug": "hafu"
-        },
-        {
-            "first_letter": "H",
-            "name": "华普",
-            "logo_img": "53d5a104e119e18b47bc63cf722d95b34169b7ac.jpg",
-            "slug": "huapu"
-        },
-        {
-            "first_letter": "H",
-            "name": "哈飞",
-            "logo_img": "d6347d45a819ead1ae9d728a24fb93b2d3a87223.jpg",
-            "slug": "hafei"
-        },
-        {
-            "first_letter": "H",
-            "name": "海马",
-            "logo_img": "3e6be478081980da23f057b64dda19a6d29cf1a2.jpg",
-            "slug": "haima"
+            "name": "华泰",
+            "logo_img": "c25e2d74376c2080a13c550222a2c3fd518d1388.jpg",
+            "slug": "huatai"
         },
         {
             "first_letter": "H",
@@ -342,24 +348,6 @@ brand_data={
             "name": "悍马",
             "logo_img": "d180b00b6f1e3788f4f2ec11db1cb432959e8fce.jpg",
             "slug": "hanma"
-        },
-        {
-            "first_letter": "H",
-            "name": "华泰",
-            "logo_img": "c25e2d74376c2080a13c550222a2c3fd518d1388.jpg",
-            "slug": "huatai"
-        },
-        {
-            "first_letter": "J",
-            "name": "吉奥",
-            "logo_img": "1fb5d3c64254aa7523143a45c78814eb2b72239c.jpg",
-            "slug": "jiao"
-        },
-        {
-            "first_letter": "J",
-            "name": "吉利英伦",
-            "logo_img": "618e03251cceeed806e5cac5935cf19aaa95b5cf.jpg",
-            "slug": "yinglunqiche"
         },
         {
             "first_letter": "J",
@@ -375,15 +363,27 @@ brand_data={
         },
         {
             "first_letter": "J",
-            "name": "捷豹",
-            "logo_img": "035f2ea5c6cb8425ca20231a88286f780136cd5f.jpg",
-            "slug": "jiebao"
+            "name": "吉奥",
+            "logo_img": "1fb5d3c64254aa7523143a45c78814eb2b72239c.jpg",
+            "slug": "jiao"
+        },
+        {
+            "first_letter": "J",
+            "name": "吉利英伦",
+            "logo_img": "618e03251cceeed806e5cac5935cf19aaa95b5cf.jpg",
+            "slug": "yinglunqiche"
         },
         {
             "first_letter": "J",
             "name": "九龙",
             "logo_img": "d540a4e452e641a9b430f7c3ff7a09a07d7a531a.jpg",
             "slug": "logo_258"
+        },
+        {
+            "first_letter": "J",
+            "name": "吉利帝豪",
+            "logo_img": "e17e34e8b34abe3f25b309862569f49c770cee9b.jpg",
+            "slug": "dihao"
         },
         {
             "first_letter": "J",
@@ -423,9 +423,9 @@ brand_data={
         },
         {
             "first_letter": "J",
-            "name": "吉利帝豪",
-            "logo_img": "e17e34e8b34abe3f25b309862569f49c770cee9b.jpg",
-            "slug": "dihao"
+            "name": "捷豹",
+            "logo_img": "035f2ea5c6cb8425ca20231a88286f780136cd5f.jpg",
+            "slug": "jiebao"
         },
         {
             "first_letter": "K",
@@ -441,9 +441,9 @@ brand_data={
         },
         {
             "first_letter": "K",
-            "name": "开瑞",
-            "logo_img": "1a68ffdc6402a8e0a398960b90ed6f86abf7540d.jpg",
-            "slug": "kairui"
+            "name": "卡尔森",
+            "logo_img": "2f22b78d0075feb3a109b92e9233b4c26e1ed751.jpg",
+            "slug": "logo_269"
         },
         {
             "first_letter": "K",
@@ -452,10 +452,28 @@ brand_data={
             "slug": "chrysler"
         },
         {
+            "first_letter": "K",
+            "name": "开瑞",
+            "logo_img": "1a68ffdc6402a8e0a398960b90ed6f86abf7540d.jpg",
+            "slug": "kairui"
+        },
+        {
+            "first_letter": "L",
+            "name": "莲花",
+            "logo_img": "428355d32386f45e4d5690141f7a433002996b39.jpg",
+            "slug": "lotus"
+        },
+        {
             "first_letter": "L",
             "name": "雷诺",
             "logo_img": "5aba92252f6c9a104569bbae242621410e133c26.jpg",
             "slug": "renault"
+        },
+        {
+            "first_letter": "L",
+            "name": "理念",
+            "logo_img": "ec2fe09d0fc8fdef7e64b789190c9ee5e34c2d27.jpg",
+            "slug": "linian"
         },
         {
             "first_letter": "L",
@@ -471,21 +489,21 @@ brand_data={
         },
         {
             "first_letter": "L",
-            "name": "劳斯莱斯",
-            "logo_img": "7ccfc739cab69042255a20b572e44fac79729645.jpg",
-            "slug": "rolls-royce"
-        },
-        {
-            "first_letter": "L",
             "name": "林肯",
             "logo_img": "1e177d32d0126bff6fe0160ae2cdeb2ac5129b10.jpg",
             "slug": "lincoln"
         },
         {
             "first_letter": "L",
-            "name": "理念",
-            "logo_img": "ec2fe09d0fc8fdef7e64b789190c9ee5e34c2d27.jpg",
-            "slug": "linian"
+            "name": "陆风",
+            "logo_img": "904887a346a719ca6aba18d85552456bcb7b5c6a.jpg",
+            "slug": "lufeng"
+        },
+        {
+            "first_letter": "L",
+            "name": "路特斯",
+            "logo_img": "lotus_brang.jpg",
+            "slug": "lutesi"
         },
         {
             "first_letter": "L",
@@ -501,33 +519,21 @@ brand_data={
         },
         {
             "first_letter": "L",
-            "name": "莲花",
-            "logo_img": "428355d32386f45e4d5690141f7a433002996b39.jpg",
-            "slug": "lotus"
-        },
-        {
-            "first_letter": "L",
             "name": "兰博基尼",
             "logo_img": "e28ea693aa34d9ff50bfb284f2529b29741f2df8.jpg",
             "slug": "lamborghini"
         },
         {
             "first_letter": "L",
-            "name": "陆风",
-            "logo_img": "904887a346a719ca6aba18d85552456bcb7b5c6a.jpg",
-            "slug": "lufeng"
-        },
-        {
-            "first_letter": "L",
-            "name": "路特斯",
-            "logo_img": "lotus_brang.jpg",
-            "slug": "lutesi"
+            "name": "劳斯莱斯",
+            "logo_img": "7ccfc739cab69042255a20b572e44fac79729645.jpg",
+            "slug": "rolls-royce"
         },
         {
             "first_letter": "M",
-            "name": "迈凯轮",
-            "logo_img": "maikailun.jpg",
-            "slug": "logo_259"
+            "name": "MINI(迷你)",
+            "logo_img": "a9b71bf7276702d7396117feff6cfb76103e9f35.jpg",
+            "slug": "mini"
         },
         {
             "first_letter": "M",
@@ -549,9 +555,9 @@ brand_data={
         },
         {
             "first_letter": "M",
-            "name": "MINI(迷你)",
-            "logo_img": "a9b71bf7276702d7396117feff6cfb76103e9f35.jpg",
-            "slug": "mini"
+            "name": "迈凯轮",
+            "logo_img": "maikailun.jpg",
+            "slug": "logo_259"
         },
         {
             "first_letter": "M",
@@ -567,21 +573,21 @@ brand_data={
         },
         {
             "first_letter": "N",
-            "name": "南汽新雅途",
-            "logo_img": "dd12c417bf3d732d6ac8441185d951159ba01040.jpg",
-            "slug": "nanqi"
-        },
-        {
-            "first_letter": "N",
             "name": "纳智捷",
             "logo_img": "078cc4b4926b0e64ee5b3391f176870b15f4fbde.jpg",
             "slug": "dongfengyulongnazhijie"
         },
         {
+            "first_letter": "N",
+            "name": "南汽新雅途",
+            "logo_img": "dd12c417bf3d732d6ac8441185d951159ba01040.jpg",
+            "slug": "nanqi"
+        },
+        {
             "first_letter": "O",
-            "name": "欧宝",
-            "logo_img": "52dd24e40290b6148fe5cd0ab879993ab7d2ad6e.jpg",
-            "slug": "opel"
+            "name": "欧朗",
+            "logo_img": "365a8ff700d99f8f08222e3b99ebbb8d2352ad26.jpg",
+            "slug": "logo_257"
         },
         {
             "first_letter": "O",
@@ -591,15 +597,21 @@ brand_data={
         },
         {
             "first_letter": "O",
-            "name": "欧朗",
-            "logo_img": "365a8ff700d99f8f08222e3b99ebbb8d2352ad26.jpg",
-            "slug": "logo_257"
+            "name": "欧宝",
+            "logo_img": "52dd24e40290b6148fe5cd0ab879993ab7d2ad6e.jpg",
+            "slug": "opel"
         },
         {
             "first_letter": "P",
             "name": "Pagani",
             "logo_img": "191_80.jpg",
             "slug": "logo_191"
+        },
+        {
+            "first_letter": "Q",
+            "name": "启辰",
+            "logo_img": "f375aa3049cba2bad8e427a7e9fbfcba9c512d1a.jpg",
+            "slug": "logo_245"
         },
         {
             "first_letter": "Q",
@@ -614,18 +626,6 @@ brand_data={
             "slug": "kia"
         },
         {
-            "first_letter": "Q",
-            "name": "启辰",
-            "logo_img": "f375aa3049cba2bad8e427a7e9fbfcba9c512d1a.jpg",
-            "slug": "logo_245"
-        },
-        {
-            "first_letter": "R",
-            "name": "瑞麒",
-            "logo_img": "d3284684167594dbc73d729f15da3d34cec55a84.jpg",
-            "slug": "ruilin"
-        },
-        {
             "first_letter": "R",
             "name": "日产",
             "logo_img": "8272d2eed04e21df64c2ce44dfc327738a33a0e6.jpg",
@@ -638,10 +638,10 @@ brand_data={
             "slug": "rongwei"
         },
         {
-            "first_letter": "S",
-            "name": "三菱",
-            "logo_img": "81af6fde292974bfe4bc179a125799ec762f71b6.jpg",
-            "slug": "mitsubishi"
+            "first_letter": "R",
+            "name": "瑞麒",
+            "logo_img": "d3284684167594dbc73d729f15da3d34cec55a84.jpg",
+            "slug": "ruilin"
         },
         {
             "first_letter": "S",
@@ -651,9 +651,9 @@ brand_data={
         },
         {
             "first_letter": "S",
-            "name": "Smart",
-            "logo_img": "cef0f98f9928fe55c797ee00a7d3f7ca65983d1f.jpg",
-            "slug": "smart"
+            "name": "三菱",
+            "logo_img": "81af6fde292974bfe4bc179a125799ec762f71b6.jpg",
+            "slug": "mitsubishi"
         },
         {
             "first_letter": "S",
@@ -666,6 +666,12 @@ brand_data={
             "name": "双环",
             "logo_img": "134bd363cbd58826c5d171a0c98eed19b744a3f7.jpg",
             "slug": "shuanghuan"
+        },
+        {
+            "first_letter": "S",
+            "name": "Smart",
+            "logo_img": "cef0f98f9928fe55c797ee00a7d3f7ca65983d1f.jpg",
+            "slug": "smart"
         },
         {
             "first_letter": "S",
@@ -687,27 +693,27 @@ brand_data={
         },
         {
             "first_letter": "T",
-            "name": "天马",
-            "logo_img": "20120619152341422.jpg",
-            "slug": "tianma"
-        },
-        {
-            "first_letter": "T",
             "name": "天津一汽",
             "logo_img": "365a8ff700d99f8f08222e3b99ebbb8d2352ad26.jpg",
             "slug": "tj-yiqi"
         },
         {
-            "first_letter": "W",
-            "name": "沃尔沃",
-            "logo_img": "13a8409c1b4dc611e18afaf470a531bad874a244.jpg",
-            "slug": "volvo"
+            "first_letter": "T",
+            "name": "天马",
+            "logo_img": "20120619152341422.jpg",
+            "slug": "tianma"
         },
         {
             "first_letter": "W",
             "name": "五菱",
             "logo_img": "21919ef3cde1641bc0c4c9ff8ce42fb2259d10cd.jpg",
             "slug": "wuling"
+        },
+        {
+            "first_letter": "W",
+            "name": "沃尔沃",
+            "logo_img": "13a8409c1b4dc611e18afaf470a531bad874a244.jpg",
+            "slug": "volvo"
         },
         {
             "first_letter": "W",
@@ -723,21 +729,15 @@ brand_data={
         },
         {
             "first_letter": "X",
-            "name": "新凯",
-            "logo_img": "c5e96fd95f992cffea0a26c0bc2158765ee218d3.jpg",
-            "slug": "xinkai"
-        },
-        {
-            "first_letter": "X",
             "name": "雪铁龙",
             "logo_img": "40659ec3fe73d8adf28022713421c95c56d29ca7.jpg",
             "slug": "citroen"
         },
         {
             "first_letter": "X",
-            "name": "西雅特",
-            "logo_img": "bc9d55074c1f303af8ccf12d8e56a3e067a49c65.jpg",
-            "slug": "xiyate"
+            "name": "雪佛兰",
+            "logo_img": "b01e4004dd145f0569c0ff61647f1eb3abb78d97.jpg",
+            "slug": "chevrolet"
         },
         {
             "first_letter": "X",
@@ -747,9 +747,21 @@ brand_data={
         },
         {
             "first_letter": "X",
-            "name": "雪佛兰",
-            "logo_img": "b01e4004dd145f0569c0ff61647f1eb3abb78d97.jpg",
-            "slug": "chevrolet"
+            "name": "新凯",
+            "logo_img": "c5e96fd95f992cffea0a26c0bc2158765ee218d3.jpg",
+            "slug": "xinkai"
+        },
+        {
+            "first_letter": "X",
+            "name": "西雅特",
+            "logo_img": "bc9d55074c1f303af8ccf12d8e56a3e067a49c65.jpg",
+            "slug": "xiyate"
+        },
+        {
+            "first_letter": "Y",
+            "name": "永源汽车",
+            "logo_img": "799b9518bf19f1b73c04e66901e786daea0ba042.jpg",
+            "slug": "yongyuanqiche"
         },
         {
             "first_letter": "Y",
@@ -759,9 +771,9 @@ brand_data={
         },
         {
             "first_letter": "Y",
-            "name": "依维柯",
-            "logo_img": "a5b2153834c4049a18f8d057adcddb5c185c44c4.jpg",
-            "slug": "nj-iveco"
+            "name": "英菲尼迪",
+            "logo_img": "5e7b79c41a6d1ffab6b8915a09dbb0f2597f8f85.jpg",
+            "slug": "infiniti"
         },
         {
             "first_letter": "Y",
@@ -771,27 +783,21 @@ brand_data={
         },
         {
             "first_letter": "Y",
+            "name": "依维柯",
+            "logo_img": "a5b2153834c4049a18f8d057adcddb5c185c44c4.jpg",
+            "slug": "nj-iveco"
+        },
+        {
+            "first_letter": "Y",
             "name": "一汽吉林大发",
             "logo_img": "bd67dea4ef5fa6b28bbc002cb62965eb6a140dfd.jpg",
             "slug": "jilindafa"
         },
         {
             "first_letter": "Y",
-            "name": "英菲尼迪",
-            "logo_img": "5e7b79c41a6d1ffab6b8915a09dbb0f2597f8f85.jpg",
-            "slug": "infiniti"
-        },
-        {
-            "first_letter": "Y",
             "name": "一汽通用",
             "logo_img": "365a8ff700d99f8f08222e3b99ebbb8d2352ad26.jpg",
             "slug": "yiqitongyong"
-        },
-        {
-            "first_letter": "Y",
-            "name": "永源汽车",
-            "logo_img": "799b9518bf19f1b73c04e66901e786daea0ba042.jpg",
-            "slug": "yongyuanqiche"
         },
         {
             "first_letter": "Y",
@@ -807,9 +813,9 @@ brand_data={
         },
         {
             "first_letter": "Z",
-            "name": "众泰",
-            "logo_img": "a2d48a13dfbe2c77645ade001790e63a82f8cbd8.jpg",
-            "slug": "zhongtai"
+            "name": "中顺",
+            "logo_img": "d1f824c2016cef2d140425de3d91efe4a65689bb.jpg",
+            "slug": "zhongshun"
         },
         {
             "first_letter": "Z",
@@ -819,9 +825,9 @@ brand_data={
         },
         {
             "first_letter": "Z",
-            "name": "中顺",
-            "logo_img": "d1f824c2016cef2d140425de3d91efe4a65689bb.jpg",
-            "slug": "zhongshun"
+            "name": "众泰",
+            "logo_img": "a2d48a13dfbe2c77645ade001790e63a82f8cbd8.jpg",
+            "slug": "zhongtai"
         }
     ]
 }
