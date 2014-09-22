@@ -1,0 +1,55 @@
+*** Settings ***
+Documentation     A test suite with test cases for testing the partner webpage of baixing web site
+Library  Selenium2Library
+Suite setup  Suite setup user
+Suite Teardown  Close Browser
+
+*** Variables ***
+${MAIN URL}  http://192.168.1.188:8000/baixing
+${BAIXING_JUMP_URL}  http://bj.0.0:8000/baixing/used-dazhong-prices/dazhong-cc-jinkou/2012/?intent=sell&release=0
+${BROWSER}  firefox
+${BAIXING_URL}  http://www.baixing.com
+${VALUATION}  已采纳该车型的估值
+${Bing}  http://www.bing.com
+*** Test Cases ***
+Successful baixing and gongpingjia website
+  Go to  ${MAIN URL}
+  # Open browser  ${MAIN URL}  ff
+# Click //a[@id='djHideToolBarButton']
+  Click Element   xpath=//a[@class="show_makes_button"]
+  Click Element   xpath=//span[@title="大众"]
+  Click Element   xpath=//a[text()=2011]
+  Click Element   xpath=//a[@href='/baixing/used-dazhong-prices/2011/?release=1&c=car']
+  Click Element   xpath=//a[@id='djHideToolBarButton']
+  Sleep  3
+  Click Element   xpath=//span[@name='golf']
+  Click Element   xpath=html/body/div[4]/div[4]/div[3]/div[4]/a
+  Click Element   xpath=//div[@id='user-trade-car']
+  Location Should Contain  ${BAIXING_URL}
+  # Click Button   xpath=//a[@class="green-btn"]
+
+Successful baixing and gongpingjia website
+  Go to  ${BAIXING_JUMP_URL}
+# Click //a[@id='djHideToolBarButton']
+  Click Element   xpath=html/body/div[4]/div[4]/div[3]/div[4]/a
+  Page Should Contain  ${VALUATION}
+  Click Element   xpath=//a[@href="/baixing/?release=0"]
+
+  Click Element   xpath=//a[@class="show_makes_button"]
+  Click Element   xpath=//span[@title="大众"]
+  Click Element   xpath=//a[text()=2011]
+  Click Element   xpath=//a[@href='/baixing/used-dazhong-prices/2011/?release=0&c=car']
+  Click Element   xpath=//a[@id='djHideToolBarButton']
+  Sleep  3
+  Click Element   xpath=//span[@name='golf']
+  Click Element   xpath=html/body/div[4]/div[4]/div[3]/div[4]/a
+  Page Should Contain  ${VALUATION}
+
+*** keyWord ***
+Suite setup user
+  # Open Browser   www.bing.com
+  # Sleep 3
+  # 
+  Open Browser   ${Bing}
+  Maximize Browser Window
+  Set Selenium Timeout  5seconds
