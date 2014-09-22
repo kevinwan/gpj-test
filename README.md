@@ -17,6 +17,9 @@ Auto test project for gongpingjia.
 -How to show the robot-framework syntax in sublime editor?
 https://github.com/andriyko/sublime-robot-framework-assistant
 
+-Where is the robotframework doc?
+http://robotframework.org/robotframework/latest/libraries/BuiltIn.html
+
 
 P.S:If you have any question or suggestion for the testing project, please contact Yan Xiaodong
 skype: dan_yan1
