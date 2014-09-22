@@ -16,32 +16,32 @@ Successful baixing and gongpingjia website
   Go to  ${MAIN URL}
   # Open browser  ${MAIN URL}  ff
 # Click //a[@id='djHideToolBarButton']
-  Click Element   xpath=//a[@class="show_makes_button"]
-  Click Element   xpath=//span[@title="大众"]
-  Click Element   xpath=//a[text()=2011]
-  Click Element   xpath=//a[@href='/baixing/used-dazhong-prices/2011/?release=1&c=car']
-  Click Element   xpath=//a[@id='djHideToolBarButton']
+  Click Element   //a[@class="show_makes_button"]
+  Click Element   //span[@title="大众"]
+  Click Element   //a[text()=2011]
+  Click Element   //a[@href='/baixing/used-dazhong-prices/2011/?release=1&c=car']
+  Click Element   //a[@id='djHideToolBarButton']
   Sleep  3
-  Click Element   xpath=//span[@name='golf']
+  Click Element   //span[@name='golf']
   Click Element   xpath=html/body/div[4]/div[4]/div[3]/div[4]/a
-  Click Element   xpath=//div[@id='user-trade-car']
+  Click Element   //div[@id='user-trade-car']
   Location Should Contain  ${BAIXING_URL}
-  # Click Button   xpath=//a[@class="green-btn"]
+  # Click Button   //a[@class="green-btn"]
 
 Successful baixing and gongpingjia website
   Go to  ${BAIXING_JUMP_URL}
 # Click //a[@id='djHideToolBarButton']
   Click Element   xpath=html/body/div[4]/div[4]/div[3]/div[4]/a
   Page Should Contain  ${VALUATION}
-  Click Element   xpath=//a[@href="/baixing/?release=0"]
+  Click Element   //a[@href="/baixing/?release=0"]
 
-  Click Element   xpath=//a[@class="show_makes_button"]
-  Click Element   xpath=//span[@title="大众"]
-  Click Element   xpath=//a[text()=2011]
-  Click Element   xpath=//a[@href='/baixing/used-dazhong-prices/2011/?release=0&c=car']
-  Click Element   xpath=//a[@id='djHideToolBarButton']
+  Click Element   //a[@class="show_makes_button"]
+  Click Element   //span[@title="大众"]
+  Click Element   //a[text()=2011]
+  Click Element   //a[@href='/baixing/used-dazhong-prices/2011/?release=0&c=car']
+  Click Element   //a[@id='djHideToolBarButton']
   Sleep  3
-  Click Element   xpath=//span[@name='golf']
+  Click Element   //span[@name='golf']
   Click Element   xpath=html/body/div[4]/div[4]/div[3]/div[4]/a
   Page Should Contain  ${VALUATION}
 
