@@ -5,7 +5,7 @@ Suite setup  Suite setup user
 Suite Teardown  Close Browser
 
 *** Variables ***
-${MAIN URL}  http://192.168.1.188:8000/baixing
+${MAIN URL}  http://0.0.0.0:8000/baixing
 ${BAIXING_JUMP_URL}  http://bj.0.0:8000/baixing/used-dazhong-prices/dazhong-cc-jinkou/2012/?intent=sell&release=0
 ${BROWSER}  firefox
 ${BAIXING_URL}  http://www.baixing.com
@@ -28,7 +28,7 @@ Successful baixing and gongpingjia website
   Location Should Contain  ${BAIXING_URL}
   # Click Button   //a[@class="green-btn"]
 
-Successful baixing and gongpingjia website
+Successful baixing and gongpingjia website no button
   Go to  ${BAIXING_JUMP_URL}
 # Click //a[@id='djHideToolBarButton']
   Click Element   xpath=html/body/div[4]/div[4]/div[3]/div[4]/a
@@ -39,7 +39,7 @@ Successful baixing and gongpingjia website
   Click Element   //span[@title="大众"]
   Click Element   //a[text()=2011]
   Click Element   //a[@href='/baixing/used-dazhong-prices/2011/?release=0&c=car']
-  Click Element   //a[@id='djHideToolBarButton']
+  Run Keyword And Ignore Error  Click Element   //a[@id='djHideToolBarButton']
   Sleep  3
   Click Element   //span[@name='golf']
   Click Element   xpath=html/body/div[4]/div[4]/div[3]/div[4]/a
